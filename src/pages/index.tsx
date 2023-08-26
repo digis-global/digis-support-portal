@@ -1,11 +1,3 @@
-import { Inter } from 'next/font/google'
+import SupportForm from '@/features/SupportForm'
 
-const font = Inter({ subsets: ['latin'] })
-
-export default function Home() {
-  return (
-    <main className={font.className}>
-      <h2>Digis Support</h2>
-    </main>
-  )
-}
+export default SupportForm
