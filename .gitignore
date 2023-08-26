@@ -34,5 +34,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# PWA Configs
 public/sw.js
+public/sw.js.map
 public/workbox-*
+
+# Environment configs
+.env
