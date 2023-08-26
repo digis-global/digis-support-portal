@@ -33,6 +33,7 @@ const manifest: Partial<ManifestOptions> = {
     },
   ],
   name: "Digis Support Portal",
+  short_name: "Digis Support",
 };
 
 // https://vitejs.dev/config/
