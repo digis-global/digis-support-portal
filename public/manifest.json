@@ -1,0 +1,30 @@
+{
+  "name": "Digis Support Portal",
+  "short_name": "DigisSupport",
+  "description": "Instabable web portal for easy support request from  engineering Team",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/pwa-64x64.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
