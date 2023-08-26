@@ -23,5 +23,7 @@ export default class MailService {
       subject: "Digis Support Request",
       text: support,
     });
+
+    return { success: true };
   }
 }
