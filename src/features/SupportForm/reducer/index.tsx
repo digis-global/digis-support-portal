@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { message as messageHook } from "antd";
+import { useMediaQuery } from 'react-responsive'
 
 export function useSupportForm() {
     const [message, messageContext] = messageHook.useMessage();
     const [loading, setLoading] = useState(false)
+    const isBigScreen = useMediaQuery({ query: '(min-width: 648px)' })
+
 
     const sendRequest = async (support: string) => {
         try {
@@ -23,7 +26,7 @@ export function useSupportForm() {
     }
 
     return {
-        state: { loading },
+        state: { loading, isBigScreen },
         actions: { sendRequest },
         messageContext
     }
