@@ -13,6 +13,7 @@
     "@types/nodemailer": "^6.4.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
+    "@types/react-responsive": "^8.0.5",
     "antd": "^5.8.4",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
@@ -21,6 +22,7 @@
     "nodemailer": "^6.9.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-responsive": "^9.0.2",
     "typescript": "5.2.2"
   }
 }
