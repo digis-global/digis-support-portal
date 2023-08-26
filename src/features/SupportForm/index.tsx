@@ -1,6 +1,7 @@
 import { CSSProperties, FC } from "react";
-import { Layout, Typography, Form, Input, Button } from "antd";
+import { Layout, Typography, Form, Input, Button, } from "antd";
 import { useSupportForm } from "./reducer";
+import { SendOutlined } from "@ant-design/icons";
 
 const SupportForm: FC = () => {
     const { state, actions, messageContext } = useSupportForm()
@@ -11,7 +12,7 @@ const SupportForm: FC = () => {
             <Layout style={{ backgroundColor: 'white' }}>
                 <div style={state.isBigScreen ? styles.formContainer : {}}>
                     <div style={state.isBigScreen ? styles.responsiveContainer : {}}>
-                        <Form onFinish={(values: { support: string }) => actions.sendRequest(values.support)} layout="vertical">
+                        <Form ref={state.form} onFinish={(values: { support: string }) => actions.sendRequest(values.support)} layout="vertical">
                             <Layout.Header style={styles.header}>
                                 <div style={styles.headerContainer}>
                                     <Typography.Title><span style={styles.blueColor}>Digi</span><span style={styles.goldColor}>s</span> <span style={styles.blueColor}>Support</span></Typography.Title>
@@ -22,8 +23,8 @@ const SupportForm: FC = () => {
                                     <Input.TextArea rows={7} />
                                 </Form.Item>
                                 <div style={styles.buttonContainer}>
-                                    <Form.Item>
-                                        <Button loading={state.loading} type="primary" htmlType="submit">Send</Button>
+                                    <Form.Item style={{ flex: 1 }}>
+                                        <Button loading={state.loading} style={{ width: '100%', height: '3rem' }} type="primary" htmlType="submit" icon={<SendOutlined />}>Send</Button>
                                     </Form.Item>
                                 </div>
                             </Layout.Content>
@@ -52,7 +53,7 @@ const styles: TStyles = {
     header: { backgroundColor: "white", padding: '10px' },
     headerContainer: { display: 'flex', justifyContent: 'center', alignItems: 'center' },
     contentContainer: { padding: '5px', marginTop: '1rem', },
-    buttonContainer: { display: 'flex', justifyContent: 'flex-end' },
+    buttonContainer: { display: 'flex' },
     blueColor: { color: "#1057A4" },
     goldColor: { color: "#FDB400" }
 }
