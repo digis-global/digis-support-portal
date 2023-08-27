@@ -20,7 +20,7 @@ const SupportForm: FC = () => {
                             </Layout.Header>
                             <Layout.Content style={styles.contentContainer}>
                                 <Form.Item label={<Typography.Title level={4} >Explain us your problem</Typography.Title>} name="support">
-                                    <Input.TextArea rows={7} placeholder="Write here..." />
+                                    <Input.TextArea rows={7} placeholder="Type here..." />
                                 </Form.Item>
                                 <div style={styles.buttonContainer}>
                                     <Form.Item style={styles.buttonItem}>
