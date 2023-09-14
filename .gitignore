@@ -41,3 +41,6 @@ public/workbox-*
 
 # Environment configs
 .env
+
+# IDEs
+.idea
