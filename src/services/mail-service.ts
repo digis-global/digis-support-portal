@@ -2,7 +2,7 @@ import { createTransport, Transporter } from "nodemailer";
 
 export default class MailService {
   private transporter: Transporter;
-  private admins: string[] = ["info@cybersafe.live"];
+  private admins: string[] = [];
   private supportEmails!: string;
 
   constructor() {
